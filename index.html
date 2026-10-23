@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marketing Digital para PAPs | Brisanet</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--or:#FF4700;--or2:#FF7E05;--bl:#2242D4;--bg:#fff;--card:#F4F4F7;--tx:#1d2233;--mu:#5d6477;--ln:#e6e7ee;--soft:#FFE9DF;--sbl:#E4E9FB;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font-family:Poppins,system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.55;overflow-x:hidden}
+nav{align-items:center;position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--card);border-bottom:1px solid var(--ln);display:flex;gap:6px;padding:8px 12px;overflow-x:auto}
+nav a{white-space:nowrap;text-decoration:none;color:var(--tx);font-size:13px;font-weight:600;padding:6px 12px;border-radius:99px}
+nav a:hover{background:var(--soft)}
+section{max-width:980px;margin:0 auto;padding:56px 20px;position:relative}
+h1,h2,h3{line-height:1.15;margin:0 0 12px}
+h2{font-size:clamp(26px,5vw,36px);color:var(--or);font-weight:800}
+h2 small{display:block;width:max-content;font-size:13px;background:var(--bl);color:#fff;font-weight:600;padding:5px 16px 5px 20px;border-radius:0 99px 99px 0;margin:0 0 10px -20px}
+.hero{text-align:center;padding-top:50px;background:radial-gradient(circle at 7% 20%,transparent 0 44px,#FFE3D2 45px 62px,transparent 63px),radial-gradient(circle at 95% 75%,transparent 0 80px,#FFE3D2 81px 112px,transparent 113px),radial-gradient(circle at 90% 10%,var(--or2) 0 12px,transparent 13px),radial-gradient(circle at 12% 88%,var(--bl) 0 9px,transparent 10px)}
+.hero h1{font-size:clamp(32px,7vw,56px);font-weight:800;color:var(--or)}
+.hero h1 span{color:var(--bl)}
+.pill{display:inline-block;background:var(--bl);color:#fff;font-weight:600;font-size:13px;padding:6px 16px;border-radius:0 99px 99px 0;margin-bottom:18px}
+.hero p{max-width:620px;margin:10px auto 22px;color:var(--mu)}
+.btn{background:var(--or);color:#fff;border:0;font:600 15px Poppins,sans-serif;padding:12px 24px;border-radius:99px;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.alt{background:var(--bl)}
+.card{background:var(--card);border-radius:28px;padding:22px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.lead{color:var(--mu);max-width:680px}
+.tl{display:flex;gap:8px;overflow-x:auto;padding:14px 4px 18px;margin:18px 0}
+.tl button{flex:0 0 auto;min-width:92px;border:2px solid var(--ln);background:var(--card);color:var(--tx);border-radius:18px;padding:10px 8px;cursor:pointer;font:600 13px Poppins,sans-serif;text-align:center}
+.tl button b{display:block;font-size:20px}
+.tl button.on{border-color:var(--or);background:var(--soft);transform:translateY(-4px)}
+#tlbox{display:grid;gap:16px;grid-template-columns:1fr}
+#tlbox h3{color:var(--bl);font-size:22px}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px;background:var(--sbl);color:var(--bl);margin:0 6px 6px 0}
+.tag.o{background:var(--soft);color:var(--or)}
+.tip{border-left:5px solid var(--or);background:var(--soft);padding:12px 16px;border-radius:0 14px 14px 0;margin-top:14px;font-size:14px}
+.big{font-size:40px}
+.flip{perspective:800px;cursor:pointer;min-height:170px}
+.flip>div{position:relative;height:100%;min-height:170px;transition:transform .5s;transform-style:preserve-3d}
+.flip.on>div{transform:rotateY(180deg)}
+.flip .f,.flip .b{position:absolute;inset:0;backface-visibility:hidden;border-radius:22px;padding:18px;display:flex;flex-direction:column;justify-content:center}
+.flip .f{background:var(--card);border:1px solid var(--ln)}
+.flip .b{background:var(--bl);color:#fff;transform:rotateY(180deg);font-size:14px}
+.flip .b b{color:#FFD2B0}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+.tabs button{border:2px solid var(--ln);background:var(--card);color:var(--tx);font:600 14px Poppins,sans-serif;padding:8px 16px;border-radius:99px;cursor:pointer}
+.tabs button.on{background:var(--or);border-color:var(--or);color:#fff}
+.two{display:grid;gap:20px;grid-template-columns:1fr;align-items:center}
+@media(min-width:760px){.two{grid-template-columns:240px 1fr}}
+.phone{width:220px;height:400px;margin:auto;border-radius:32px;border:6px solid #1d2233;background:linear-gradient(160deg,var(--or2),#d6246e);position:relative;overflow:hidden;color:#fff;padding:14px}
+.phone .bar{height:4px;border-radius:9px;background:rgba(255,255,255,.4);overflow:hidden}.phone .bar i{display:block;height:100%;width:60%;background:#fff}
+.phone .who{font-size:12px;font-weight:600;margin-top:10px}
+.phone .msg{margin-top:70px;font-size:22px;font-weight:800;text-align:center;line-height:1.2}
+.sticker{position:absolute;left:50%;bottom:90px;transform:translateX(-50%);background:#fff;color:#128C4A;font-weight:700;font-size:13px;padding:9px 14px;border-radius:14px;white-space:nowrap;animation:pop 1.6s infinite}
+@keyframes pop{50%{transform:translateX(-50%) scale(1.08)}}
+.mk{width:100%;max-width:230px;margin:auto}
+.mk .ph{height:110px;border-radius:14px;background:linear-gradient(135deg,var(--bl),#6f86ff);display:flex;align-items:center;justify-content:center;font-size:44px}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.steps li{counter-increment:s;background:var(--card);border:1px solid var(--ln);border-radius:16px;padding:12px 14px 12px 52px;position:relative;font-size:14px}
+.steps li::before{content:counter(s);position:absolute;left:12px;top:10px;width:30px;height:30px;border-radius:50%;background:var(--or);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center}
+.chk label{display:flex;gap:10px;align-items:flex-start;padding:10px 4px;border-bottom:1px dashed var(--ln);cursor:pointer;font-size:14px}
+.chk input{width:20px;height:20px;accent-color:var(--or);flex:0 0 auto;margin-top:2px}
+.prog{height:12px;border-radius:99px;background:var(--ln);overflow:hidden;margin:10px 0}.prog i{display:block;height:100%;width:0;background:var(--or);transition:width .4s}
+.q button{display:block;width:100%;text-align:left;margin:8px 0;padding:12px 16px;border-radius:14px;border:2px solid var(--ln);background:var(--card);color:var(--tx);font:500 14px Poppins,sans-serif;cursor:pointer}
+.q button.ok{border-color:#1a9b53;background:#1a9b5322}.q button.no{border-color:#d93a3a;background:#d93a3a22}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center;font-size:12px;margin-top:12px}
+.cal div{border-radius:12px;padding:8px 2px;background:var(--sbl);color:var(--bl);font-weight:600}
+.cal div.p{background:var(--soft);color:var(--or)}
+.ag .tag{min-width:62px;text-align:center}
+.fn svg{width:100%;max-width:560px;margin:auto;display:block}
+.fn .p{fill:none;stroke-width:6;stroke-linecap:round;transition:opacity .3s}
+.fn .dr{stroke-dasharray:1;stroke-dashoffset:1;animation:dr 1.3s ease forwards}
+.fn .l1{animation-delay:1.1s}.fn .l2{animation-delay:2s}
+@keyframes dr{to{stroke-dashoffset:0}}
+.fn .cb{fill:none;stroke:#4285f4;stroke-width:3;stroke-dasharray:7 6;opacity:0;animation:fi .6s 3s forwards}
+@keyframes fi{to{opacity:1}}
+.fn .t{fill:var(--tx);font:600 18px Poppins,sans-serif;letter-spacing:.05em}
+.fn .s{fill:var(--tx);font:500 13px Poppins,sans-serif}
+.fn svg[data-f] .p{opacity:.15}
+.fn svg[data-f="g"] .g,.fn svg[data-f="l1"] .l1,.fn svg[data-f="l2"] .l2,.fn svg[data-f="c"] .cb{opacity:1}
+.ig{max-width:520px}.igtop{display:flex;gap:14px;align-items:center}
+.av{display:flex;width:72px;height:72px;border-radius:50%;background:var(--or);align-items:center;justify-content:center;font-size:32px;border:3px solid var(--card);outline:3px solid #d6246e}
+.hs{font:500 14px Poppins,sans-serif;color:var(--tx);background:none;border:2px dashed transparent;border-radius:12px;padding:4px 8px;margin:2px -8px;text-align:left;cursor:pointer;animation:hp 2s infinite}
+.hs:hover,.hs.on{border-color:var(--or);background:var(--soft)}
+@keyframes hp{50%{border-color:var(--or)}}
+.ex{background:var(--sbl);border-radius:14px;padding:12px 14px;font-size:14px;margin:8px 0}
+.cp{border:0;background:var(--bl);color:#fff;font:600 13px Poppins,sans-serif;padding:8px 14px;border-radius:99px;cursor:pointer}
+.q button .num{display:inline-flex;width:32px;height:32px;border-radius:50%;background:var(--or);color:#fff;font-weight:800;align-items:center;justify-content:center;margin-right:12px}
+.q button{font-size:17px}
+.logo{background:url(data:image/png;base64,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) no-repeat left center/contain}
+nav .logo{width:130px;height:24px;flex:0 0 auto;margin-right:8px}
+.hl{width:min(340px,76%);aspect-ratio:480/88;margin:0 auto 22px;background-position:center}
+.bar{width:180px;height:12px;border-radius:99px;margin:0 auto 18px;background:linear-gradient(90deg,var(--or2) 0 62%,var(--bl) 62%)}
+footer .logo{width:210px;height:38px;margin:0 auto 10px;background-position:center}
+section:not(.hero)::before{content:"";position:absolute;right:-50px;top:20px;width:130px;height:130px;border-radius:50%;border:18px solid #FFEBE1;pointer-events:none;z-index:-1}
+section:nth-of-type(even)::before{right:auto;left:-60px;border-color:#E4E9FB}
+.era{text-align:center;margin:36px 0 22px;position:relative;z-index:2;background:#fff;padding:8px 0}
+.era span{display:inline-block;background:var(--c);color:#fff;font-weight:700;font-size:13px;padding:5px 16px;border-radius:99px}
+.era b{display:block;font-size:20px;margin-top:6px}
+.tline{position:relative;margin-top:26px}
+.tline::before{content:"";position:absolute;left:28px;top:0;bottom:0;width:6px;border-radius:9px;background:linear-gradient(var(--or2),var(--bl))}
+.ti{position:relative;padding:0 0 30px 84px;opacity:0;transform:translateY(24px);transition:.6s}
+.ti.in{opacity:1;transform:none}
+.nd{position:absolute;left:0;top:0;width:62px;height:62px;border-radius:50%;background:#fff;border:5px solid var(--c);display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 4px 14px #0002;z-index:1}
+.ti .cd{background:var(--card);border-radius:24px;padding:18px 20px;border-top:5px solid var(--c)}
+.yr{display:inline-block;background:var(--c);color:#fff;font-weight:800;padding:2px 14px;border-radius:99px;font-size:15px}
+.ti h3{color:var(--bl);font-size:21px;margin:8px 0}.ti p{margin:0;font-size:14px}.ti .tip{background:#fff}
+@media(min-width:820px){.tline::before{left:50%;margin-left:-3px}.ti{width:50%;padding:0 62px 30px 0}.ti.r{margin-left:50%;padding:0 0 30px 62px}.nd{left:auto;right:-31px}.ti.r .nd{right:auto;left:-31px}}
+.mp{background:#fff;border-radius:18px;padding:14px;box-shadow:0 4px 18px #0002;font-family:"Segoe UI",system-ui,sans-serif;color:#050505}
+.mpt{font-weight:600;font-size:14px;margin-bottom:10px}
+.mpb{display:grid;grid-template-columns:1fr;border:1px solid #dadde1;border-radius:12px;overflow:hidden}
+@media(min-width:760px){.mpb{grid-template-columns:1.5fr 1fr}}
+#mpl{background:#f0f2f5;min-height:260px;display:flex;align-items:center;justify-content:center;padding:14px;text-align:center;color:#65676b}
+#mpl b{display:block;font-size:20px;color:#4b4c4f}
+#mpr{padding:16px;border-left:1px solid #dadde1;font-size:14px;min-height:260px}
+#mpr h4{font-size:22px;margin:0 0 2px;line-height:1.15}#mpr .pr{font-size:17px;font-weight:600}
+#mpr small{color:#65676b;font-size:12px;display:block;margin:2px 0 12px}
+#mpr h5{font-size:16px;margin:14px 0 6px}
+#mpr .ph,#mpr h4.ph,#mpr h5.ph{color:#8a8d91}
+#mpr .ch{display:inline-block;background:#e4e6eb;border-radius:99px;padding:5px 12px;margin:0 6px 6px 0;font-size:13px}
+.hi{outline:3px dashed var(--or);outline-offset:3px;border-radius:10px;animation:hp 1.6s infinite}
+.sel{display:flex;gap:10px;align-items:center;color:#65676b;font-weight:600}.sel i{font-style:normal;width:40px;height:40px;border-radius:50%;background:#ccd0d5;display:flex;align-items:center;justify-content:center}
+.arw{container-type:inline-size;width:100%}
+.art{aspect-ratio:1/1;background:linear-gradient(160deg,#FF8A1F,#E8481E);color:#fff;padding:5cqw;display:flex;flex-direction:column;justify-content:space-between;font-size:3.3cqw;border-radius:2cqw}
+.art .logo{width:42cqw;height:8cqw;margin:0 auto;background-position:center;filter:brightness(0) invert(1)}
+.art p{margin:0;text-align:center;font-weight:600;font-size:4cqw;line-height:1.2}
+.ar-m{display:flex;gap:4cqw;align-items:center}
+.ar-f{flex:0 0 32cqw;height:32cqw;border-radius:50%;background:#ffffff33;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:12cqw;line-height:1}.ar-f small{font-size:3cqw;margin-top:1cqw}
+.ar-p{flex:1;display:grid;gap:2cqw}.ar-p div{border:.5cqw solid #ffffffb0;border-radius:3cqw;padding:2cqw;text-align:center;font-weight:600}
+.art .pw{display:block;background:#ffffffe0;color:#E8481E;border-radius:99px;padding:1.4cqw 4cqw;font-weight:700;width:max-content;margin:0 auto 1cqw}
+.art .nm{display:block;text-align:center;font-size:8cqw;font-weight:800;line-height:1.1}
+.art .ct{display:block;text-align:center;font-weight:700;font-size:4cqw}
+.mst{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--ln);font-weight:800;margin-right:8px}.tabs button.on .mst{background:#fff;color:var(--or)}
+.wag{display:grid;gap:18px;grid-template-columns:1fr;align-items:start}
+@media(min-width:800px){.wag{grid-template-columns:310px 1fr}}
+.where{color:var(--mu);font-size:14px;margin:0 0 12px}
+.ph2{width:min(300px,100%);margin:auto;background:#0b0b0b;border:8px solid #1d1d1f;border-radius:38px;color:#fff;font-family:system-ui,-apple-system,sans-serif;overflow:hidden}
+.ph2 .scr{height:500px;overflow:auto;padding:6px 12px 16px}
+.ph2 .hd{display:flex;align-items:center;justify-content:space-between;padding:8px 0;font-weight:600;font-size:15px}
+.ph2 .bk{width:30px;height:30px;border-radius:50%;background:#222;display:flex;align-items:center;justify-content:center;font-size:18px}
+.ph2 .sv{background:#4a4a4a;color:#999;border-radius:99px;padding:6px 14px;font-size:13px}
+.ph2 h6{font-size:14px;margin:14px 4px 6px;font-weight:600;color:#e8e8e8}
+.ph2 .grp{background:#161818;border-radius:18px;overflow:hidden}
+.ph2 .row{display:flex;align-items:center;gap:10px;padding:11px 14px;font-size:13px;color:#cfd2d4;border:0;border-bottom:1px solid #2a2d2e;cursor:pointer;width:100%;background:none;text-align:left;font-family:inherit}
+.ph2 .row:last-child{border-bottom:0}
+.ph2 .row i{font-style:normal;width:22px;text-align:center;flex:0 0 auto}
+.ph2 .row span{flex:1}
+.ph2 .row:after{content:"›";color:#888;font-size:18px}
+.ph2 .row.nc:after{content:""}
+.ph2 .row.on,.ph2 .big2.on{outline:2px dashed var(--or2);outline-offset:-2px;background:#2a1a10}
+.ph2 .row.wt{color:#fff}
+.ph2 .tg{width:42px;height:24px;border-radius:99px;background:#fff;position:relative;flex:0 0 auto}.ph2 .tg:after{content:"";position:absolute;right:3px;top:3px;width:26px;height:18px;border-radius:99px;background:#111}
+.ph2 .tg.off{background:#4a4a4a}.ph2 .tg.off:after{right:auto;left:3px;background:#111}
+.ph2 .note{color:#9a9da0;font-size:11.5px;margin:8px 6px}
+.ph2 .big2{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;height:130px;background:#232626;border-radius:20px;margin:6px 0 10px;width:100%;border:0;color:#fff;font:600 13px system-ui;cursor:pointer}
+.ph2 .tagq{display:inline-block;background:#2b2e2f;border-radius:8px;padding:4px 10px;font-size:13px;margin-bottom:6px}
+.ph2 .th{width:64px;height:64px;border-radius:12px;background:linear-gradient(160deg,#FFC400,#FF6A13);margin:4px 0}
+.ph2 .dot{width:16px;height:16px;border-radius:50%;flex:0 0 auto}
+.ph2 .bub{align-self:flex-end;background:#144d37;border-radius:14px 14px 2px 14px;padding:6px;max-width:78%;font-size:13px}
+.ph2 .bub .th{width:100%;height:100px;margin:0 0 4px}
+.ph2 .inp{background:#2a2a2a;border-radius:99px;padding:8px 14px;margin:8px 0;font-size:15px}
+[hidden]{display:none!important}
+.pers{border:3px solid var(--ln);background:var(--card);border-radius:24px;padding:18px;text-align:left;cursor:pointer;font:500 14px Poppins,sans-serif;color:var(--tx);display:flex;flex-direction:column;gap:4px}
+.pers b{font-size:20px;color:var(--bl)}.pers small{color:var(--mu)}.pers.on{border-color:var(--or);background:var(--soft)}
+.simg{display:grid;gap:16px;grid-template-columns:1fr;margin-top:16px;align-items:start}
+@media(min-width:860px){.simg{grid-template-columns:1fr 1.1fr}}
+.simg[data-s="5"]{grid-template-columns:1fr}.simg[data-s="5"] .ed{display:none}
+.simg[data-s="5"] .simR{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:start}
+.ed label{display:block;font-weight:600;font-size:13px;margin:12px 0 4px;color:var(--bl)}
+.ed input[type=text],.ed textarea,.ed select{width:100%;border:2px solid var(--ln);border-radius:14px;padding:10px 12px;font:500 14px Poppins,sans-serif;background:#fff;color:var(--tx)}
+.ed textarea{min-height:76px;resize:vertical}
+.ed .r2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cn{float:right;font-size:12px;color:var(--mu);font-weight:600}.cn.w{color:#d93a3a}
+.ed .ck{display:inline-flex;gap:6px;align-items:center;margin:4px 12px 4px 0;font-weight:500;color:var(--tx)}.ed .ck input{accent-color:var(--or);width:18px;height:18px}
+.pv{background:var(--card);border-radius:24px;padding:16px}
+.pv h4{margin:0 0 10px;color:var(--bl);font-size:15px}
+.igp{background:#fff;border-radius:18px;padding:16px;box-shadow:0 2px 12px #0001;color:#111;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.igp .tp{display:flex;gap:14px;align-items:center}
+.igp .avi{width:78px;height:78px;border-radius:50%;background:var(--or);color:#fff;font-weight:800;font-size:30px;display:flex;align-items:center;justify-content:center;outline:3px solid #d6246e;outline-offset:2px;flex:0 0 auto}
+.igp .un{font-weight:700;font-size:16px;word-break:break-all}.igp .nm{font-weight:600;font-size:14px}
+.igp .bio{white-space:pre-wrap;font-size:14px;margin:10px 0;word-break:break-word}.igp .lk{color:#00376b;font-weight:600;font-size:14px;word-break:break-all}
+.igp .bt{display:flex;gap:8px;margin:12px 0}.igp .bt span{flex:1;text-align:center;background:#efefef;border-radius:8px;padding:7px;font-weight:600;font-size:14px}.igp .bt span:first-child{background:#0095f6;color:#fff}
+.igp .hl2{display:flex;gap:12px;font-size:11px;text-align:center;overflow:auto}.igp .hl2 i{display:block;width:52px;height:52px;border-radius:50%;background:#efefef;margin:0 auto 3px;font-style:normal;line-height:52px;font-size:22px}
+.pc{background:#fff;border-radius:18px;padding:14px;color:#111;font-size:14px;box-shadow:0 2px 12px #0001}
+footer{text-align:center;color:var(--mu);font-size:13px;padding:30px 20px 50px}
+</style>
+</head>
+<body>
+<nav><div class="logo" role="img" aria-label="Brisanet"></div><a href="#inicio">Início</a><a href="#tempo">Linha do tempo</a><a href="#funil">Funil</a><a href="#organico">Orgânico</a><a href="#perfil">Perfil Instagram</a><a href="#stories">Stories</a><a href="#wabiz">WhatsApp Business</a><a href="#market">Marketplace</a><a href="#quiz">Quiz</a><a href="#pratica">Mão na massa</a></nav>
+
+<section class="hero" id="inicio">
+<div class="logo hl" role="img" aria-label="Brisanet"></div>
+<span class="pill">Treinamento técnico • PAPs Brisanet</span>
+<h1>Marketing digital que <span>vende</span> de verdade</h1>
+<p>Do conteúdo orgânico ao link do WhatsApp: como cada PAP pode atrair clientes na internet usando só o celular.</p>
+<a class="btn" href="#tempo">Começar a jornada</a>
+<div class="grid ag" style="margin-top:34px;text-align:left">
+<div class="card"><h3 style="color:var(--bl)">🎤 Hora 1 • Palestra</h3><p><span class="tag o">10 min</span>Linha do tempo<br><span class="tag o">8 min</span>Funil de marketing<br><span class="tag o">12 min</span>Conteúdo orgânico<br><span class="tag o">10 min</span>Perfil do Instagram<br><span class="tag o">8 min</span>WhatsApp Business<br><span class="tag o">7 min</span>Stories e Marketplace<br><span class="tag o">5 min</span>Quiz relâmpago</p></div>
+<div class="card"><h3 style="color:var(--bl)">🛠️ Hora 2 • Mão na massa</h3><p><span class="tag">20 min</span>Configurar o WhatsApp Business<br><span class="tag">15 min</span>Ajustar o perfil do Instagram<br><span class="tag">20 min</span>Minha Arte + 1ª publicação<br><span class="tag">5 min</span>Compartilhar e tirar dúvidas<br><span class="tag o">Lideranças</span>Simulador de persona em grupos</p></div></div>
+</section>
+
+<section id="tempo">
+<h2><small>Parte 1</small>Como a internet mudou a forma de comprar</h2>
+<p class="lead">Cada plataforma abaixo mudou o mundo e, junto, o jeito de o cliente descobrir, comparar e comprar. Role a linha do tempo e veja o que isso significa para quem vende.</p>
+<div class="tline" id="tline"></div>
+</section>
+
+<section id="funil">
+<h2><small>Parte 2</small>O funil de marketing</h2>
+<p class="lead">Ninguém compra internet em linha reta. Entre o primeiro estímulo e a contratação, o cliente vai e volta várias vezes. Seu papel é estar presente em cada etapa.</p>
+<div class="fn"><div id="fnBox" style="min-height:300px"></div>
+<div style="text-align:center"><button class="btn alt" onclick="funil()">▶ Repetir animação</button></div>
+<h3 style="color:var(--bl);margin-top:24px">Toque em uma etapa</h3>
+<div class="tabs" id="fnTabs"></div><div class="card" id="fnTxt"></div></div>
+</section>
+
+<section id="organico">
+<h2><small>Parte 3 • o coração do treinamento</small>Conteúdo orgânico</h2>
+<p class="lead"><b>Orgânico</b> é todo conteúdo publicado sem pagar para impulsionar. Quem vê é a sua rede e quem o algoritmo decide entregar. O custo é o seu tempo e a sua constância.</p>
+<div class="grid" style="margin:20px 0">
+<div class="card"><div class="big">🌱</div><h3>Orgânico</h3><p>Grátis para publicar. Cresce aos poucos, constrói confiança e rende indicações.</p></div>
+<div class="card"><div class="big">🚀</div><h3>Pago</h3><p>Você paga para aparecer para mais gente. Gera resultado rápido, mas para quando o dinheiro acaba.</p></div>
+<div class="card"><div class="big">🤝</div><h3>Juntos</h3><p>O conteúdo orgânico que funciona bem é o melhor candidato a virar anúncio.</p></div>
+</div>
+
+<h3 style="color:var(--bl)">Os 3 tipos de conteúdo (clique para virar)</h3>
+<div class="grid" id="flips"></div>
+
+<h3 style="color:var(--bl);margin-top:34px">Seu perfil de PAP é a sua vitrine</h3>
+<ul class="steps" style="margin-top:12px">
+<li><b>Foto e nome profissionais</b>: rosto visível, camisa da Brisanet, nome que o cliente reconheça.</li>
+<li><b>Bio objetiva</b>: quem você é, a cidade onde atende e um link direto para o seu WhatsApp.</li>
+<li><b>Destaques organizados</b>: planos, como contratar, instalação, depoimentos e dúvidas.</li>
+<li><b>Prova social</b>: instalação feita, cliente satisfeito (sempre com autorização dele) e bastidores reais.</li>
+<li><b>Chamada para ação em tudo</b>: termine cada post dizendo o próximo passo (“chama no WhatsApp”).</li>
+</ul>
+
+<h3 style="color:var(--bl);margin-top:34px">Monte sua semana de conteúdo</h3>
+<p class="lead">Exemplo de rotina leve. Toque nos dias para ver a ideia.</p>
+<div class="cal" id="cal"></div>
+<div class="tip" id="calTip">Escolha um dia acima 👆</div>
+
+<div class="card" style="margin-top:24px"><h3>Regras de ouro do orgânico</h3>
+<div class="chk" id="gold"></div></div>
+</section>
+
+<section id="perfil">
+<h2><small>Parte 4</small>Arrume o perfil do Instagram</h2>
+<p class="lead">Antes de postar, o perfil precisa estar pronto: é ele que o cliente vê quando decide se confia em você. Toque nos pontos do perfil abaixo.</p>
+<div class="two" style="margin-top:20px;grid-template-columns:1fr">
+<div class="card ig"><div class="igtop"><button class="hs" data-k="foto"><span class="av">📡</span></button>
+<div style="min-width:0"><button class="hs" data-k="user" style="font-weight:700">seunome.brisanet</button><br>
+<button class="hs" data-k="nome"><b>Seu Nome | Internet Brisanet Cidade</b></button><br>
+<button class="hs" data-k="cat" style="color:var(--mu)">Consultor de telecomunicações</button></div></div>
+<button class="hs" data-k="bio" style="margin-top:10px;display:block">Consultor Brisanet em [Cidade] 📡 Fibra, 5G e chip para você.<br>Peça sua oferta no WhatsApp 👇</button>
+<button class="hs" data-k="links" style="color:var(--bl);margin-top:6px">🔗 wa.me/55... e mais 2 links</button>
+<div style="display:flex;gap:8px;margin:12px 0"><button class="hs" data-k="botao" style="flex:1;background:var(--sbl);text-align:center">WhatsApp</button><span class="hs" style="flex:1;background:var(--sbl);text-align:center">Ligar</span></div>
+<button class="hs" data-k="dest">⭕ Planos &nbsp;⭕ Como contratar &nbsp;⭕ Instalação &nbsp;⭕ Clientes</button></div>
+<div class="tip" id="igTip" style="margin:0">Toque em qualquer parte do perfil 👆</div></div>
+</section>
+
+<section id="stories">
+<h2><small>Parte 5 • ferramenta de vendas</small>Stories com link do WhatsApp</h2>
+<p class="lead">O Story some em 24 horas e fica no topo da tela do seguidor. Com o adesivo de link, o cliente toca e já cai na sua conversa.</p>
+<div class="two" style="margin-top:20px">
+<div class="phone"><div class="bar"><i></i></div><div class="who">● seu_perfil_pap</div><div class="msg">Internet que não cai!<br>Chama aqui 👇</div><div class="sticker">💬 Falar no WhatsApp</div></div>
+<div>
+<div class="tabs" id="stTabs"></div>
+<div id="stBox"></div>
+</div></div>
+</section>
+
+<section id="wabiz">
+<h2><small>Parte 6</small>Estruture o WhatsApp Business</h2>
+<p class="lead">Aqui a venda acontece. O app gratuito WhatsApp Business organiza o atendimento e passa mais confiança que um número pessoal comum. Veja as cinco configurações que importam.</p>
+<div class="tabs" id="waTabs" style="margin-top:20px"></div><div id="waBox"></div>
+<div class="tip"><b>Respeite o cliente (LGPD):</b> listas de transmissão só chegam a quem salvou seu número, e você não deve adicionar quem não pediu contato.</div>
+</section>
+
+<section id="market">
+<h2><small>Parte 7 • ferramenta de vendas</small>Marketplace do Facebook</h2>
+<p class="lead">É a vitrine de compra e venda do Facebook, usada por gente da sua região que está procurando ofertas. Quem entra lá já está com intenção de comprar.</p>
+<div class="tabs" id="mkNav" style="margin-top:20px"></div>
+<div class="mp"><div class="mpt">Prévia</div><div class="mpb"><div id="mpl"></div><div id="mpr"></div></div></div>
+<div class="card" id="mkTxt" style="margin:16px 0"></div>
+<div class="tip"><b>Atenção:</b> o Marketplace tem regras próprias da Meta sobre o que pode ser anunciado, e planos de internet são serviços. Antes de publicar, confirme com o Marketing da Brisanet o que é permitido e o padrão de comunicação da marca.</div>
+<div class="card" style="margin-top:22px"><h3>Checklist de um bom anúncio</h3>
+<div class="prog"><i id="pg"></i></div><small id="pgt" style="color:var(--mu)">0 de 6 itens</small>
+<div class="chk" id="mkChk"></div></div>
+</section>
+
+<section id="quiz">
+<h2><small>Parte 8</small>Quiz relâmpago</h2>
+<p class="lead">Leia a pergunta, peça para a turma responder <b>1</b> ou <b>2</b> no chat do Meet e depois clique na opção para ver a resposta.</p>
+<div class="card q" id="quizBox"></div>
+</section>
+
+<section id="pratica">
+<h2><small>Hora 2</small>Mão na massa</h2>
+<p class="lead">Escolha o seu perfil. A <b>operação</b> configura as próprias contas passo a passo. A <b>liderança</b> monta uma persona de vendedor e simula tudo antes de apresentar.</p>
+<div class="grid" style="margin:18px 0;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+<button class="pers on" id="bOp" onclick="persona('op')"><span class="big">👷</span><b>Operação</b><small>Checklist com progresso das atividades</small></button>
+<button class="pers" id="bLd" onclick="persona('ld')"><span class="big">🧑‍💼</span><b>Liderança</b><small>Simulador de persona: Instagram, WhatsApp e Marketplace</small></button></div>
+<div id="pOp">
+<div class="card"><b>Seu progresso</b><div class="prog"><i id="pgAll"></i></div><small id="pgAllT" style="color:var(--mu)"></small></div>
+<div class="grid" style="margin-top:16px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))">
+<div class="card"><h3 style="color:var(--bl)">1 • WhatsApp Business <span class="tag o">20 min</span></h3><div class="chk" id="pa"></div></div>
+<div class="card"><h3 style="color:var(--bl)">2 • Perfil do Instagram <span class="tag o">15 min</span></h3><div class="chk" id="pb"></div></div>
+<div class="card"><h3 style="color:var(--bl)">3 • Minha Arte + 1ª publicação <span class="tag o">20 min</span></h3>
+<div class="tip" style="margin:0 0 10px"><b>Seja a estrela na divulgação das ofertas!</b> No <b>Minha Arte Brisanet</b> você personaliza a arte com a sua foto e os seus dados e compartilha com seus clientes pelas redes sociais.</div>
+<a class="btn alt" target="_blank" rel="noopener" href="https://script.google.com/a/macros/grupobrisanet.com.br/s/AKfycbzirVY6aO1Kubh4UnmNeuksfUn7OlQMCVwsgpFySdgNEc1SKhXySZMrTdnbFF7S_-qR/exec">🎨 Abrir Minha Arte Brisanet</a>
+<small style="display:block;color:var(--mu);margin:8px 0">Link interno do grupo: se pedir login, use a conta corporativa.</small>
+<div class="chk" id="pc"></div>
+<div class="ex" id="cap">📡 Internet de verdade para a sua casa! Fibra Brisanet com instalação na sua cidade. Quer saber como contratar? Toque no link do meu perfil e fale comigo no WhatsApp 💬</div>
+<button class="cp" onclick="cp('cap',this)">Copiar legenda modelo</button></div></div>
+<div class="tip">Terminou? Mande o link da sua publicação no chat do Meet. Cada publicação é um gatilho novo para quem ainda está na etapa de exploração.</div>
+</div>
+<div id="pLd" hidden>
+<div class="card" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between">
+<div><b>⏱️ Tempo do grupo</b><br><small style="color:var(--mu)">Sugestão: persona 3 min • Instagram 4 • WhatsApp 4 • Marketplace 4</small></div>
+<div style="display:flex;gap:8px;align-items:center"><span id="tm" style="font-size:30px;font-weight:800;color:var(--or);min-width:90px;text-align:center">15:00</span><button class="cp" onclick="tmGo()">▶/⏸</button><button class="cp" style="background:var(--or)" onclick="tmReset()">↺</button></div></div>
+<div class="tabs" id="smNav" style="margin-top:16px"></div>
+<div class="simg" id="sim" data-s="1">
+<div class="card ed" id="smEd"></div>
+<div class="simR"><div class="pv" data-pv="0" id="pvP"></div><div class="pv" data-pv="1" id="pvI"></div><div class="pv" data-pv="2" id="pvW"></div><div class="pv" data-pv="3" id="pvM"></div></div></div>
+<div class="tip" style="margin-top:16px">Tudo aqui é um exemplo para treinar. Preços e condições reais devem ser conferidos com o Marketing antes de publicar.</div>
+</div>
+</section>
+
+<footer><div class="bar"></div><div class="logo" role="img" aria-label="Brisanet"></div>Treinamento de Marketing Digital • PAPs Brisanet<br>Combine sempre com o Marketing o que pode ser divulgado: ofertas, preços e condições mudam.</footer>
+
+<script>
+const $=s=>document.querySelector(s);
+const E=[
+{n:"ERA 1",t:"A internet vira o lugar de procurar",c:"#2242D4",i:[
+["1998","🔎","Google","A busca na internet fica simples e rápida. Pesquisar passa a ser o primeiro passo antes de decidir qualquer coisa, e nasce a disputa para aparecer nos resultados (o chamado SEO).","Quem não é encontrado não é considerado. Por isso o nome do seu perfil importa tanto."],
+["2004","👥","Orkut e Facebook","O Orkut foi a primeira grande rede social dos brasileiros, e o Facebook nasce no mesmo ano nos Estados Unidos. Pela primeira vez as pessoas têm identidade online, amigos e comunidades.","A indicação do boca a boca passa a acontecer em público, e recomendar vira conteúdo."],
+["2005","▶️","YouTube","Qualquer pessoa com uma câmera pode publicar vídeo para o mundo todo. Aprender e se informar assistindo a vídeos vira hábito.","Vídeo explica e convence. É a base dos Reels e dos vídeos curtos de hoje."]]},
+{n:"ERA 2",t:"A internet vai para o bolso",c:"#FF4700",i:[
+["2007","📱","iPhone e smartphones","O smartphone com tela sensível ao toque e aplicativos muda tudo. A internet deixa de ficar no computador de casa e passa a acompanhar a pessoa o dia inteiro (o Android chega logo depois).","O cliente pesquisa e decide em qualquer lugar. E ele precisa de conexão boa, que é exatamente o que a Brisanet entrega."],
+["2009","💬","WhatsApp","O app de mensagens pela internet substitui o SMS e depois as ligações. Em 2014 é comprado pelo Facebook (hoje Meta). No Brasil vira o principal canal de conversa.","A conversa de venda migra para o WhatsApp. Todo conteúdo seu deve terminar nele."],
+["2010","📷","Instagram","Fotos com filtros, feitas e publicadas no celular. Em 2012 o Facebook compra o Instagram, e a rede vira a grande vitrine visual da internet.","O cliente decide pelo que vê: rostos, provas e organização. Seu perfil é a sua loja."]]},
+{n:"ERA 3",t:"Conteúdo rápido e venda pela conversa",c:"#2242D4",i:[
+["2016","⏱️","Stories e Marketplace","O Instagram lança os Stories, conteúdo que some em 24 horas e acompanha o dia a dia. No mesmo ano o Facebook lança o Marketplace, uma vitrine de compra e venda entre pessoas da mesma região.","Postar com frequência fica leve, e há um espaço local onde o cliente já procura ofertas. São duas ferramentas deste treinamento."],
+["2018","🏪","WhatsApp Business","O WhatsApp lança o app gratuito para negócios, com perfil comercial, respostas rápidas, etiquetas e catálogo. Pequenos vendedores passam a ter atendimento organizado.","Você atende como profissional e não perde cliente por falta de organização."],
+["2018","🎵","TikTok","O TikTok chega ao mundo todo. Seu algoritmo entrega vídeos a desconhecidos, mesmo para quem tem poucos seguidores, e dá alcance a quem cria bons conteúdos.","Mostra que o alcance orgânico vem da qualidade do conteúdo, não do tamanho do perfil."],
+["2020","🎬","Reels, pandemia e Pix","A pandemia acelera a compra online e o atendimento digital. O Instagram lança os Reels, e no Brasil o Pix muda a forma de pagar, com transferência instantânea.","O vídeo curto alcança quem não te segue, e o cliente já espera resolver tudo pelo celular."],
+["2021","🔗","Link nos Stories para todos","O Instagram libera o adesivo de link para todas as contas, que antes era restrito a perfis grandes. O Story passa a ser um caminho direto para a ação.","Do Story ao seu WhatsApp em um toque. É a ferramenta que você vai usar na prática."]]},
+{n:"ERA 4",t:"Conversa e inteligência",c:"#FF4700",i:[
+["2022","🤖","ChatGPT e IA generativa","A inteligência artificial que escreve, resume e cria chega ao grande público. Qualquer pessoa passa a produzir texto, ideias e imagens com ajuda de IA.","Ajuda a criar legendas, roteiros e respostas mais rápido. Sempre revise e mantenha o tom da marca."],
+["2023","📣","Threads e Canais do WhatsApp","A Meta lança o Threads, uma rede de conversas por texto, e o WhatsApp lança os Canais, para transmitir novidades de um para muitos.","Surgem novos espaços de conversa. Foque no que já funciona antes de abrir novas frentes."],
+["Hoje","🚀","Jornada sem linha reta","O cliente alterna entre buscador, redes, vídeos e WhatsApp, e vai e volta até decidir. Estar presente em todas as etapas faz a diferença.","Seja encontrado, mostre provas e responda rápido. É isso que o restante do treinamento vai te ensinar."]]}];
+const tlEl=$('#tline');let k=0;
+E.forEach(e=>{tlEl.insertAdjacentHTML('beforeend',`<div class="era" style="--c:${e.c}"><span>${e.n}</span><b>${e.t}</b></div>`);
+e.i.forEach(it=>{tlEl.insertAdjacentHTML('beforeend',`<article class="ti ${k++%2?'r':'l'}" style="--c:${e.c}"><div class="nd">${it[1]}</div><div class="cd"><span class="yr">${it[0]}</span><h3>${it[2]}</h3><p><b>🌍 O que transformou no mundo</b><br>${it[3]}</p><div class="tip"><b>💼 Para quem vende:</b> ${it[4]}</div></div></article>`)})});
+if('IntersectionObserver' in window){const tio=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');tio.unobserve(x.target)}}),{threshold:.15});document.querySelectorAll('.ti').forEach(x=>tio.observe(x))}else document.querySelectorAll('.ti').forEach(x=>x.classList.add('in'));
+
+const F=[["🎓","Educar","Tire dúvidas e ensine.","<b>Exemplos:</b> como testar a velocidade, como posicionar o roteador, o que muda do cabo para a fibra. Gera confiança."],
+["💛","Conectar","Mostre quem você é.","<b>Exemplos:</b> seu dia de PAP, bastidores da instalação, o cliente que ficou feliz (com autorização). Gera proximidade."],
+["🛒","Vender","Convide para contratar.","<b>Exemplos:</b> oferta vigente, condição do plano, chamada para o WhatsApp. Use sem exagerar."]];
+F.forEach(f=>{const d=document.createElement('div');d.className='flip';d.innerHTML=`<div><div class="f"><div class="big">${f[0]}</div><h3>${f[1]}</h3><small style="color:var(--mu)">${f[2]}</small></div><div class="b">${f[3]}</div></div>`;d.onclick=()=>d.classList.toggle('on');$('#flips').append(d)});
+
+const C=[["Seg","Educar","Reels de 20 s: “3 erros que deixam seu Wi-Fi lento”."],["Ter","Conectar","Stories com bastidores da sua rotina em campo."],["Qua","Educar","Carrossel ou foto: passo a passo para testar a velocidade."],["Qui","Vender","Story com a oferta da semana e o link do WhatsApp."],["Sex","Conectar","Depoimento do cliente (com autorização)."],["Sáb","Vender","Marketplace e grupos locais: renovar anúncios."],["Dom","Descanso","Responder mensagens e comentários pendentes."]];
+C.forEach(c=>{const d=document.createElement('div');d.textContent=c[0];if(c[1]=='Vender')d.className='p';d.onclick=()=>{$('#calTip').innerHTML=`<b>${c[0]} • ${c[1]}:</b> ${c[2]}`};$('#cal').append(d)});
+
+function checklist(el,items,cb){items.forEach((t,i)=>{const l=document.createElement('label');l.innerHTML=`<input type="checkbox"><span>${t}</span>`;l.firstChild.onchange=cb;$(el).append(l)})}
+checklist('#gold',["<b>Constância vence perfeição:</b> 3 publicações por semana valem mais que 10 em um dia e nada depois.","<b>Os 3 primeiros segundos:</b> comece com o que prende (pergunta, problema ou resultado).","<b>Sempre uma chamada para ação:</b> diga o próximo passo.","<b>Responda rápido:</b> comentário e mensagem sem resposta são venda perdida.","<b>Seja real:</b> linguagem simples e imagens da sua região.","<b>Respeite o cliente:</b> peça autorização para postar e nunca envie mensagem em massa para quem não pediu contato (LGPD)."]);
+
+const S=[["Como fazer","<ol class='steps'><li>Abra o Instagram e crie um Story (foto ou vídeo curto).</li><li>Toque no ícone de adesivos e escolha <b>Link</b>.</li><li>Cole o link do seu WhatsApp (veja a aba “Link”).</li><li>Escreva uma chamada clara: “Toque aqui e fale comigo”.</li><li>Publique e responda quem chamar em poucos minutos.</li></ol>"],
+["Link","<div class='card'><p>O formato do link direto é:</p><p><b style='word-break:break-all'>https://wa.me/55DDDNUMERO?text=Oi,%20quero%20saber%20sobre%20a%20Brisanet</b></p><p>Troque DDD e número pelo seu (com 55 na frente, sem espaços ou símbolos). O texto depois de <b>?text=</b> já vem preenchido para o cliente, e te ajuda a saber de qual Story ele veio. Teste o link antes de publicar.</p></div>"],
+["Ideias","<ul class='steps'><li>Pergunta com enquete: “Sua internet cai à noite?” e link logo depois.</li><li>Antes e depois de velocidade (com autorização do cliente).</li><li>Oferta da semana, com a condição correta e a validade.</li><li>Contagem regressiva para o fim de uma condição.</li><li>Fixe nos Destaques os Stories que mais vendem.</li></ul>"],
+["Erros","<ul class='steps'><li>Link sem testar ou com número errado.</li><li>Story sem chamada para ação.</li><li>Prometer preço ou condição que não está vigente.</li><li>Demorar horas para responder.</li><li>Postar só oferta, sem conteúdo de valor.</li></ul>"]];
+S.forEach((s,i)=>{const b=document.createElement('button');b.textContent=s[0];b.onclick=()=>{[...$('#stTabs').children].forEach((x,j)=>x.classList.toggle('on',i===j));$('#stBox').innerHTML=s[1]};$('#stTabs').append(b)});$('#stTabs').firstChild.click();
+
+const MS=[["Abrir","Entre com a conta do Facebook e abra o Marketplace.",""],
+["Foto","Use foto real e nítida, de preferência sua ou de uma instalação.","Dica: a arte do Minha Arte Brisanet já sai com a sua foto e os seus dados."],
+["Título e cidade","Escreva título e descrição simples, com a cidade e o que o cliente ganha.",""],
+["Categoria","Escolha a categoria e crie o anúncio com o que for permitido pela política.","Os nomes das categorias podem variar. Escolha a mais próxima do que você oferece."],
+["WhatsApp","Direcione para o WhatsApp para continuar a conversa.",""],
+["Renovar","Renove e responda sempre: anúncio parado perde posição.",""]];
+const ART='<div class="arw"><div class="art"><div class="logo"></div><p>A maior operadora 100% brasileira tem a melhor oferta para você.</p><div class="ar-m"><div class="ar-f">🙂<small>Sua foto</small></div><div class="ar-p"><div>Plano 1<br>oferta vigente</div><div>Plano 2<br>oferta vigente</div><div>Plano 3<br>oferta vigente</div></div></div><div><span class="pw">Entre em contato com</span><span class="nm">Seu Nome</span><span class="ct">💬 (DDD) 9999-9999</span></div></div></div>';
+let ms=0;
+function mp(){const s=ms,t=s>=2,c=s>=3;
+$('#mpl').innerHTML=s>=1?`<div class="${s==1?'hi':''}" style="width:100%;max-width:440px">${ART}<small style="display:block;margin-top:6px">Exemplo ilustrativo. A arte real vem do Minha Arte Brisanet.</small></div>`:'<div><b>Prévia do seu classificado</b>Ao criar seu classificado, você poderá ver como ele aparecerá para outras pessoas no Marketplace.</div>';
+$('#mpr').innerHTML=`<div class="${s==2?'hi':''}"><h4 class="${t?'':'ph'}">${t?'INTERNET PRO SEU CELULAR':'Título'}</h4><div class="pr ${t?'':'ph'}">${t?'R$ [valor vigente]':'Preço'}</div><small>Anunciado há alguns segundos em ${t?'<b>Fortaleza</b>':'sua cidade'}</small></div>
+<h5 class="${c?'':'ph'}">Detalhes</h5>${c?`<div class="${s==3?'hi':''}" style="margin-bottom:8px"><b>Categoria</b> a mais próxima do que você oferece<br><b>Condição</b> Novo</div>`:''}
+<div class="${s==4?'hi':''}" style="margin-bottom:8px">${t?'Contrate agora a melhor internet pro seu celular! Fale comigo e conheça os planos Brisanet.'+(s>=4?'<br>💬 Chame no WhatsApp: (DDD) 9999-9999':''):'<span class="ph">A descrição aparecerá aqui.</span>'}</div>
+${c?'<b>Tags</b><div style="margin-top:6px"><span class="ch">internet</span><span class="ch">celular</span><span class="ch">brisanet</span><span class="ch">chip</span></div>':''}
+<h5 class="ph">Informações do vendedor</h5><div class="sel"><i>🙂</i>Seu Nome</div>${s==5?'<div class="hi" style="margin-top:12px;padding:8px;text-align:center;font-weight:600">🔄 Renove o anúncio e responda rápido</div>':''}`;
+[...$('#mkNav').children].forEach((b,i)=>b.classList.toggle('on',i===s));
+const m=MS[s];$('#mkTxt').innerHTML=`<span class="tag o">Passo ${s+1} de ${MS.length}</span><h3 style="color:var(--bl)">${m[1]}</h3>${m[2]?`<p style="color:var(--mu);margin:0 0 10px">${m[2]}</p>`:''}<button class="cp" ${s?'':'disabled style="opacity:.4"'} onclick="ms--;mp()">◀ Voltar</button> <button class="cp" style="background:var(--or)" ${s<MS.length-1?'':'disabled style="opacity:.4"'} onclick="ms++;mp()">Próximo ▶</button>`}
+MS.forEach((m,i)=>{const b=document.createElement('button');b.innerHTML=`<span class="mst">${i+1}</span>${m[0]}`;b.style.display='inline-flex';b.style.alignItems='center';b.onclick=()=>{ms=i;mp()};$('#mkNav').append(b)});mp();
+const upd=()=>{const a=[...document.querySelectorAll('#mkChk input')];const n=a.filter(x=>x.checked).length;$('#pg').style.width=n/a.length*100+'%';$('#pgt').textContent=n+' de '+a.length+' itens'};
+checklist('#mkChk',["Foto real e com boa luz","Título claro, sem exagero","Cidade e região de atendimento","Informação conferida com o Marketing (preço e condição)","Botão ou mensagem levando ao WhatsApp","Resposta em até alguns minutos"],upd);
+
+const Q=[["Publicar um Reels sem pagar para impulsionar é:",["Conteúdo orgânico","Conteúdo pago"],0,"Sem pagar para alcançar mais gente, o conteúdo é orgânico."],
+["Qual item não pode faltar em um Story de venda?",["Música alta","Chamada para ação com link"],1,"Sem o próximo passo, o cliente não sabe como falar com você."],
+["Seu link do WhatsApp no Story deve:",["Ser testado antes de publicar","Ser publicado sem conferir"],0,"Um link quebrado é venda perdida."],
+["Qual é uma boa prática de conteúdo?",["Postar só oferta todo dia","Misturar educar, conectar e vender"],1,"A mistura constrói confiança antes da oferta."],
+["Na jornada de compra, o cliente costuma:",["Ir e voltar entre explorar e avaliar","Seguir uma linha reta até comprar"],0,"A jornada tem idas e vindas. Por isso é preciso estar presente em todas as etapas."],
+["Qual campo do Instagram ajuda o perfil a ser encontrado na busca?",["A foto de perfil","O campo Nome"],1,"O campo Nome é pesquisável. Coloque seu nome, a palavra-chave Brisanet e a cidade."],
+["A mensagem de saudação do WhatsApp Business serve para:",["Receber o cliente logo no primeiro contato","Apagar conversas antigas"],0,"Ela dá boas-vindas automáticas e já pergunta o que o cliente precisa."]];
+let qi=0,pts=0;function rq(){const b=$('#quizBox');if(qi>=Q.length){b.innerHTML=`<h3>🏆 Você acertou ${pts} de ${Q.length}!</h3><p>${pts==Q.length?'Pronto para postar. Escolha o primeiro conteúdo da semana.':'Reveja as partes 2 a 4 e tente de novo.'}</p><button class="btn" onclick="qi=0;pts=0;rq()" style="width:auto;display:inline-block;color:#fff;background:var(--or);border:0;text-align:center">Jogar de novo</button>`;return}
+const q=Q[qi];b.innerHTML=`<small>Pergunta ${qi+1} de ${Q.length} • responda 1 ou 2 no chat do Meet</small><h3>${q[0]}</h3>`+q[1].map((o,i)=>`<button data-i="${i}"><span class="num">${i+1}</span>${o}</button>`).join('')+'<p id="fb" style="font-size:14px;color:var(--mu)"></p>';
+b.querySelectorAll('button').forEach(x=>x.onclick=()=>{const i=+x.dataset.i;b.querySelectorAll('button').forEach(y=>y.disabled=true);x.classList.add(i===q[2]?'ok':'no');if(i===q[2])pts++;else b.querySelectorAll('button')[q[2]].classList.add('ok');$('#fb').textContent=q[3];$('#fb').insertAdjacentHTML('afterend','<button id="nx" style="width:auto;display:inline-block;text-align:center;color:#fff;background:var(--bl);border:0;border-radius:99px;padding:10px 22px;font-size:15px">Próxima ▶</button>');$('#nx').onclick=()=>{qi++;rq()}})}
+rq();
+
+/* funil animado */
+const P1='M300,235 C270,160 250,140 195,140 C140,140 100,185 100,235 C100,285 140,330 195,330 C250,330 280,300 300,235';
+const P2='M300,235 C330,160 350,140 405,140 C460,140 500,185 500,235 C500,285 460,330 405,330 C350,330 320,300 300,235';
+const PG='M300,75 C312,140 306,195 300,235',PC='M300,235 C284,320 280,380 300,440';
+function funil(){$('#fnBox').innerHTML=`<svg viewBox="0 0 600 520" role="img" aria-label="Jornada: gatilhos, exploração, avaliação, compra e experiência">
+<circle cx="300" cy="260" r="235" fill="none" stroke="#888" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round"/>
+<circle cx="300" cy="448" r="38" fill="none" stroke="#888" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round"/>
+<text class="t" x="130" y="120" transform="rotate(-38 130 120)">Exposição</text><text class="t" x="352" y="440">Experiência</text>
+<path class="p g dr" pathLength="1" stroke="#ea4335" d="${PG}"/><path class="p l1 dr" pathLength="1" stroke="#fbbc04" d="${P1}"/><path class="p l2 dr" pathLength="1" stroke="#34a853" d="${P2}"/><path class="p cb" d="${PC}"/>
+<circle cx="300" cy="75" r="7" fill="var(--card)" stroke="var(--tx)" stroke-width="3"/><circle cx="300" cy="440" r="7" fill="var(--card)" stroke="var(--tx)" stroke-width="3"/>
+<text class="s" x="300" y="55" text-anchor="middle">GATILHOS</text><text class="s" x="300" y="478" text-anchor="middle">COMPRA</text>
+<text class="t" x="195" y="242" text-anchor="middle">Exploração</text><text class="t" x="405" y="242" text-anchor="middle">Avaliação</text>
+<circle r="9" fill="#FF6A13" opacity="0"><set attributeName="opacity" to="1" begin="3.2s"/><animateMotion dur="9s" begin="3.2s" repeatCount="indefinite" path="${PG} ${P1.replace('M300,235','')} ${P2.replace('M300,235','')} ${PC.replace('M300,235','')}"/></circle></svg>`}
+if('IntersectionObserver' in window){const io=new IntersectionObserver(e=>{if(e[0].isIntersecting){funil();io.disconnect()}},{threshold:.35});io.observe($('#fnBox'))}else funil();
+const FN=[["g","🔔 Gatilhos","Algo faz a pessoa pensar em trocar ou contratar: a internet caiu, mudança de casa, indicação de um amigo, um post que apareceu na hora certa.","Conteúdo orgânico constante e Stories. Quem aparece sempre é lembrado quando o gatilho chega."],
+["l1","🔍 Exploração","A pessoa pesquisa, vê vídeos, compara tipos de plano e descobre quem atende na cidade dela.","Reels e posts que educam, perfil com nome pesquisável e bio clara com cidade e WhatsApp."],
+["l2","⚖️ Avaliação","Ela compara operadoras, lê comentários, pergunta a conhecidos e quer segurança antes de decidir. Costuma voltar para a exploração.","Prova social (clientes reais, com autorização), Destaques organizados e resposta rápida no WhatsApp."],
+["c","✅ Compra e experiência","Ela contrata. A instalação e o uso viram a experiência que ela conta aos outros.","Acompanhe pós-venda, peça depoimento e indicação. Cliente satisfeito vira o próximo gatilho para outras pessoas."]];
+FN.forEach((f,i)=>{const b=document.createElement('button');b.textContent=f[1];b.onclick=()=>{[...$('#fnTabs').children].forEach((x,j)=>x.classList.toggle('on',i===j));const s=$('#fnBox svg');if(s)s.dataset.f=f[0];$('#fnTxt').innerHTML=`<h3 style="color:var(--bl)">${f[1]}</h3><p>${f[2]}</p><div class="tip"><b>O que o PAP faz:</b> ${f[3]}</div>`};$('#fnTabs').append(b)});
+$('#fnTxt').innerHTML='<p>O conteúdo orgânico atua principalmente nos gatilhos, na exploração e na avaliação. Escolha uma etapa acima.</p>';
+
+/* perfil Instagram */
+const IG={foto:["Foto de perfil","Rosto nítido, boa luz e fundo limpo, de preferência com a camisa da Brisanet. O cliente confia em quem vê."],
+user:["@usuário","É o endereço do perfil. Deixe fácil de falar e digitar, sem excesso de números e símbolos. Ex.: maria.brisanet"],
+nome:["Nome (use como SEO)","É o campo que o Instagram usa na busca e aceita até 64 caracteres. Modelo: Seu Nome | palavra-chave + cidade. Ex.: Maria Souza | Internet Brisanet Sobral. Use sempre palavras que o cliente digitaria e identifique-se como consultor, sem se passar pelo perfil oficial da marca."],
+cat:["Categoria","Fica logo abaixo do nome. Com a conta profissional você escolhe uma categoria coerente e libera botões de contato e estatísticas. Vale converter sua conta."],
+bio:["Bio (até 150 caracteres)","Fórmula: quem você é + o que oferece + onde atende + chamada para ação. Ex.: Consultor Brisanet em [Cidade] 📡 Fibra, 5G e chip. Peça sua oferta no WhatsApp 👇"],
+links:["Links divulgados","O Instagram permite até 5 links na bio. Sugestão de ordem: 1) seu WhatsApp (wa.me), 2) página oficial de planos, 3) oferta da semana. Teste cada link e confirme com o Marketing quais são os oficiais."],
+botao:["Botões de contato","Na conta profissional, adicione o botão de WhatsApp e ligação. É o caminho mais curto entre o interesse e a conversa."],
+dest:["Destaques","Guarde seus melhores Stories: Planos, Como contratar, Instalação, Clientes e Dúvidas. Use capas padronizadas para parecer uma vitrine organizada."]};
+document.querySelectorAll('.hs[data-k]').forEach(h=>h.onclick=()=>{document.querySelectorAll('.hs').forEach(x=>x.classList.remove('on'));h.classList.add('on');const d=IG[h.dataset.k];$('#igTip').innerHTML=`<b>${d[0]}:</b> ${d[1]}`});
+
+/* WhatsApp Business */
+function cp(id,b){const t=document.getElementById(id).innerText;try{navigator.clipboard.writeText(t).then(()=>{b.textContent='Copiado ✔'}).catch(()=>{b.textContent='Selecione e copie'})}catch(e){b.textContent='Selecione e copie'}}
+const ex=(id,t)=>`<div class="ex" id="${id}">${t}</div><button class="cp" onclick="cp('${id}',this)">Copiar modelo</button>`;
+const R=(k,ic,t,x)=>`<button class="row ${x||''}" data-w="${k}"><i>${ic}</i><span>${t}</span></button>`;
+const HD=(t,r)=>`<div class="hd"><span class="bk">‹</span><b>${t}</b>${r||'<span style="width:30px"></span>'}</div>`;
+const H={nome:["Nome da empresa","Use seu nome com Brisanet, no mesmo padrão do Instagram. Confirme com o Marketing o formato permitido."],
+categ:["Categoria","Escolha a que for mais próxima do que você faz."],
+desc:["Descrição da empresa","Quem você é, o que oferece e onde atende. Veja o modelo ao lado."],
+end:["Endereço","Opcional. Se não tiver ponto de atendimento, informe a cidade ou região."],
+hor:["Horário","Mostre quando você atende. Combina com a mensagem de saudação."],
+cat:["Catálogo","Atalho para os itens da aba 4."],
+faixa:["Faixa de preço","Só use se fizer sentido e confirme os valores com o Marketing."],
+serv:["Serviços","Liste o que você atende: fibra, 5G e chip."],
+site:["Site","Cole a página oficial de planos da Brisanet."],
+ig:["Instagram","Coloque o seu @, o mesmo que você ajustou na Parte 4."],
+fb:["Facebook","Se tiver página ou perfil de divulgação, adicione aqui."],
+mail:["E-mail comercial","Opcional."],
+tel:["Telefone","É o número do seu WhatsApp de trabalho."],
+recado:["Recado","Troque o texto padrão por uma frase sua de apresentação."],
+sg1:["Enviar mensagem de saudação","Ative para o WhatsApp responder sozinho na primeira mensagem do cliente ou depois de 14 dias sem conversa. Só é enviada com o celular conectado à internet."],
+sg2:["Destinatários","Deixe em Todos para receber qualquer pessoa que chamar."],
+sg3:["Mensagem","Se apresente e faça a primeira pergunta. Toque aqui para editar."],
+qp:["Botão +","Cria uma nova resposta rápida."],
+q1:["Atalho com imagem","Você pode anexar uma imagem, como a arte da oferta, e escrever o texto que vai junto."],
+q2:["Atalho de texto","Mensagens que você repete todo dia viram atalhos."],
+c1:["Fotos e vídeos","Use a arte da oferta ou uma foto nítida."],
+c2:["Nome do item","Obrigatório. Seja direto, como no título do Marketplace."],
+c3:["Preço","Use só o valor vigente. Confirme com o Marketing."],
+c4:["Preço promocional","Só quando houver promoção ativa."],
+c5:["Descrição","Curta, com o que o cliente ganha."],
+c6:["País de origem","Campo obrigatório do catálogo. Preencha para conseguir salvar."],
+c7:["Ocultar este item","A oferta acabou? Oculte o item em vez de apagar, e reative quando voltar."],
+e0:["Novo","Todo contato que chegou e ainda não foi respondido."],
+e1:["Em conversa","Já falou com você e está avaliando."],
+e2:["Aguardando documento","Quer contratar e falta enviar documento ou dado."],
+e3:["Contratou","Venda concluída."],
+e4:["Pós-venda","Cliente para acompanhar e pedir indicação."],
+ep:["Botão +","Cria uma nova etiqueta."]};
+const dot=c=>`<span class="dot" style="background:${c}"></span>`;
+const CHAT=`${HD('Cliente')}<div id="cht" style="height:230px;display:flex;flex-direction:column;justify-content:flex-end;gap:8px"></div><div class="inp">/</div><div class="grp"><button class="row nc" onclick="qrSend(1)"><span><b>oferta</b><br><small>🖼️ Contrate agora!</small></span></button><button class="row nc" onclick="qrSend(2)"><span><b>obrigado</b><br><small>Agradecemos o seu contato!…</small></span></button></div><p class="note">Toque em uma resposta para enviar.</p>`;
+function qrDemo(){$('#waScr').innerHTML=CHAT}
+function qrSend(n){$('#cht').insertAdjacentHTML('beforeend',n==1?'<div class="bub"><div class="th"></div>Contrate agora!</div>':'<div class="bub">Agradecemos o seu contato! Qualquer dúvida é só chamar por aqui 😊</div>')}
+const PH=[HD('Editar perfil')+`<h6>Sobre a empresa</h6><div class="grp">${R('nome','🏢','Nome da empresa')}${R('categ','🗂️','Categoria')}${R('desc','📝','Descrição da empresa')}${R('end','📍','Endereço')}${R('hor','🕘','Horário')}</div><h6>Produtos e serviços</h6><div class="grp">${R('cat','▦','Catálogo')}${R('faixa','🏷️','Faixa de preço')}${R('serv','☑️','Serviços')}</div><h6>Links</h6><div class="grp">${R('site','🔗','Site')}${R('ig','📷','Instagram')}${R('fb','ⓕ','Facebook')}</div><h6>Informações de contato</h6><div class="grp">${R('mail','✉️','E-mail comercial')}${R('tel','📞','+55 (DDD) 9XXXX-XXXX')}${R('recado','ℹ️','Olá! Eu estou usando o WhatsApp Business.')}</div>`,
+HD('Mensagem de saudação')+`<div class="grp" style="margin-top:12px">${R('sg1','','Enviar mensagem de saudação<br>','nc wt').replace('</span>','</span><span class="tg"></span>')}</div><p class="note">Envie uma mensagem de saudação em resposta à primeira mensagem de seus clientes ou após 14 dias de inatividade. A mensagem de saudação somente será enviada quando seu celular estiver conectado à internet.</p><div class="grp">${R('sg2','','Destinatários <small style="color:#999;margin-left:8px">Todos</small>','wt')}</div><h6 style="color:#999">Mensagem</h6><div class="grp">${R('sg3','','Olá! 👋 Aqui é o [Nome], consultor Brisanet. Você quer internet para casa, celular ou os dois?','wt')}</div>`,
+HD('Respostas rápidas','<span class="bk" style="background:#eee;color:#111" data-w="qp">+</span>')+`<div class="grp" style="margin-top:12px;padding:10px 14px"><div data-w="q1" style="cursor:pointer"><span class="tagq">oferta</span><br><div class="th"></div><span style="font-size:13px">🖼️ Contrate agora!</span></div><div style="border-top:1px solid #2a2d2e;margin:10px 0"></div><div data-w="q2" style="cursor:pointer"><span class="tagq">obrigado</span><br><span style="font-size:13px">Agradecemos o seu contato! Qualquer dúvida é só chamar por aqui…</span></div></div><p class="note">Crie atalhos de teclado para as mensagens enviadas com frequência. Para usá-las nas conversas, digite "/" e selecione o atalho na lista.</p>`,
+HD('Adicionar item','<span class="sv">Salvar</span>')+`<div class="grp" style="padding:10px"><button class="big2" data-w="c1"><span style="font-size:26px">📷</span>Adicionar fotos e vídeos</button>${R('c2','','Nome do item (obrigatório)','nc')}${R('c3','','Preço: R$','nc')}${R('c4','','<span style="color:#777">Preço promocional em R$</span>','nc')}${R('c5','','Descrição','nc')}${R('c6','','País de origem (obrigatório)','wt')}<div class="row nc" style="color:#25d366"><span>Mais campos</span></div></div><div class="grp" style="margin-top:12px">${R('c7','','Ocultar este item','nc wt').replace('</span>','</span><span class="tg off"></span>')}</div>`,
+HD('Etiquetas','<span class="bk" style="background:#eee;color:#111" data-w="ep">+</span>')+`<p class="note" style="margin-top:12px">Organize seus clientes por etapa da jornada.</p><div class="grp">${R('e0','',dot('#FF7E05')+' Novo','nc wt')}${R('e1','',dot('#4f7cff')+' Em conversa','nc wt')}${R('e2','',dot('#f5c518')+' Aguardando documento','nc wt')}${R('e3','',dot('#25d366')+' Contratou','nc wt')}${R('e4','',dot('#b05cff')+' Pós-venda','nc wt')}</div>`];
+const lb=t=>`<small style="display:block;color:var(--mu);margin-top:10px">${t}</small>`;
+const WA=[["1 • Perfil","Perfil da empresa","Configurações > Ferramentas comerciais > Perfil da empresa",["Preencha nome, categoria, descrição, endereço e horário.","Em Links, adicione o seu Instagram e a página oficial de planos.","Confira o telefone e o e-mail comercial.","Troque o recado padrão por uma frase de apresentação."],lb('Descrição da empresa')+ex('w1','Consultor Brisanet em [Cidade]. Fibra, 5G e chip. Atendimento de segunda a sábado, das 8h às 18h.')+lb('Recado')+ex('w1b','Fibra, 5G e chip Brisanet. Chame para conhecer as ofertas 📡')],
+["2 • Saudação","Mensagem de saudação","Configurações > Ferramentas comerciais > Mensagem de saudação",["Ative “Enviar mensagem de saudação”.","Em Destinatários, deixe Todos.","Toque na mensagem e escreva a sua: se apresente e pergunte o que o cliente precisa.","Salve e teste mandando um oi de outro número."],ex('w2','Olá! 👋 Aqui é o [Nome], consultor Brisanet. Você quer internet para casa, celular ou os dois? Já te respondo!')],
+["3 • Respostas rápidas","Atalhos para mensagens rápidas","Configurações > Ferramentas comerciais > Respostas rápidas",["Toque no + e escreva a mensagem. Você pode anexar a arte da oferta.","Crie o atalho: oferta, planos, documentos, obrigado.","Na conversa, digite / e escolha o atalho.","Antes de enviar, confira se preço e condição ainda estão vigentes."],lb('Modelo de agradecimento')+ex('w4','Agradecemos o seu contato! Qualquer dúvida é só chamar por aqui 😊'),'<div style="text-align:center;margin-top:12px"><button class="cp" onclick="qrDemo()">▶ Simular na conversa</button> <button class="cp" style="background:var(--or)" onclick="waShow(2)">↺ Voltar</button></div>'],
+["4 • Catálogo","Catálogo","Configurações > Ferramentas comerciais > Catálogo > Adicionar item",["Adicione fotos e vídeos: use a arte da oferta.","Preencha o nome do item (obrigatório) e o preço.","Se houver promoção ativa, preencha o preço promocional.","Escreva uma descrição curta com o que o cliente ganha.","Preencha o país de origem (obrigatório) e toque em Salvar.","Oferta acabou? Ative “Ocultar este item”."],lb('Descrição de exemplo')+ex('w5','Internet pro seu celular com o chip Brisanet. Fale comigo e conheça as ofertas vigentes! 📱')+'<div class="tip">Confirme com o Marketing os valores e as condições antes de publicar o item.</div>'],
+["5 • Etiquetas","Etiquetas","Configurações > Ferramentas comerciais > Etiquetas",["Crie as etiquetas do funil: Novo, Em conversa, Aguardando documento, Contratou e Pós-venda.","Na conversa, abra o menu e escolha etiquetar. Cada cliente recebe a etiqueta da etapa em que está.","Na lista de conversas, filtre por etiqueta.","Rotina diária: comece pelas etiquetas Novo e Aguardando documento."],'']];
+function waShow(i){[...$('#waTabs').children].forEach((x,j)=>x.classList.toggle('on',i===j));const w=WA[i];
+$('#waBox').innerHTML=`<div class="wag"><div><div class="ph2"><div class="scr" id="waScr">${PH[i]}</div></div>${w[5]||''}</div><div class="card"><h3 style="color:var(--bl)">${w[1]}</h3><p class="where">📍 ${w[2]}</p><ol class="steps">${w[3].map(x=>`<li>${x}</li>`).join('')}</ol>${w[4]}<div class="tip" id="waTip">Toque nos itens do celular para ver para que servem.<br><small>Os nomes e a posição dos menus podem variar conforme a versão do app e o celular.</small></div></div></div>`}
+WA.forEach((w,i)=>{const b=document.createElement('button');b.textContent=w[0];b.onclick=()=>waShow(i);$('#waTabs').append(b)});waShow(0);
+$('#waBox').onclick=e=>{const b=e.target.closest('[data-w]');if(!b||!H[b.dataset.w])return;document.querySelectorAll('#waBox .on').forEach(x=>x.classList.remove('on'));b.classList.add('on');const d=H[b.dataset.w];$('#waTip').innerHTML=`<b>${d[0]}:</b> ${d[1]}`};
+
+/* mão na massa */
+const updAll=()=>{const a=[...document.querySelectorAll('#pratica .chk input')];const n=a.filter(x=>x.checked).length;$('#pgAll').style.width=n/a.length*100+'%';$('#pgAllT').textContent=n+' de '+a.length+' passos concluídos'};
+checklist('#pa',["Instalar o WhatsApp Business com o número que você usa no trabalho","Preencher o perfil da empresa (descrição, horário, links e recado)","Ativar e escrever a mensagem de saudação","Criar 3 respostas rápidas, uma delas com a arte da oferta","Cadastrar 1 item no catálogo","Criar as etiquetas do funil"],updAll);
+checklist('#pb',["Converter a conta para profissional","Ajustar o Nome com palavra-chave e cidade","Revisar o @usuário","Escrever a bio com a fórmula","Adicionar o link do WhatsApp na bio","Adicionar o botão de contato"],updAll);
+checklist('#pc',["Abrir o Minha Arte Brisanet","Personalizar a arte com sua foto e seus dados","Baixar a arte e conferir oferta e validade","Escrever a legenda (gancho, valor, chamada para ação)","Publicar no feed","Compartilhar nos Stories com o adesivo de link do WhatsApp","Enviar o link da publicação no chat do Meet"],updAll);updAll();
+
+/* persona e simulador */
+function persona(k){$('#pOp').hidden=k!='op';$('#pLd').hidden=k!='ld';$('#bOp').classList.toggle('on',k=='op');$('#bLd').classList.toggle('on',k=='ld');if(k=='ld'&&!window.smInit)smBoot()}
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const slug=t=>t.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'');
+const lst=a=>a.length<2?a.join(''):a.slice(0,-1).join(', ')+' e '+a[a.length-1];
+const PS={nome:'Roberto',cidade:'Sobral',uf:'CE',ddd:'88',fone:'99999-9999',fibra:1,g5:1,chip:1,hor:'Segunda a sábado, das 8h às 18h'};
+const ofs=()=>{const a=[];if(PS.fibra)a.push('Fibra');if(PS.g5)a.push('5G');if(PS.chip)a.push('chip');return a.length?a:['Internet']};
+const tel=()=>'('+PS.ddd+') '+PS.fone;
+const G={
+iNome:()=>`${PS.nome} | Internet Brisanet ${PS.cidade}`,
+iUser:()=>`${slug(PS.nome)}.brisanet`,
+iBio:()=>`Consultor Brisanet em ${PS.cidade}/${PS.uf} 📡 ${lst(ofs())}.\nPeça sua oferta no WhatsApp 👇`,
+iLink:()=>`wa.me/55${PS.ddd}${PS.fone.replace(/\D/g,'')}`,
+wNome:()=>`${PS.nome} | Brisanet`,
+wDesc:()=>`Consultor Brisanet em ${PS.cidade}. ${lst(ofs())}. Atendimento ${PS.hor.charAt(0).toLowerCase()+PS.hor.slice(1)}.`,
+wRec:()=>`${lst(ofs())} Brisanet em ${PS.cidade}. Chame para conhecer as ofertas 📡`,
+wSau:()=>`Olá! 👋 Aqui é o ${PS.nome}, consultor Brisanet em ${PS.cidade}. Você quer ${PS.fibra&&(PS.g5||PS.chip)?'internet para casa, celular ou os dois':PS.fibra?'internet para a sua casa':'internet para o seu celular'}? Já te respondo!`,
+wQ1:()=>`Contrate agora! Fale comigo, ${PS.nome}, e conheça as ofertas vigentes em ${PS.cidade}.`,
+wQ2:()=>`Para seguir com a contratação, vou te pedir alguns dados e documentos. Pode me enviar por aqui?`,
+wQ3:()=>`Agradecemos o seu contato! Qualquer dúvida é só chamar o ${PS.nome} por aqui 😊`,
+mTit:()=>`${lst(ofs()).toUpperCase()} BRISANET EM ${PS.cidade.toUpperCase()}`,
+mPre:()=>'R$ [valor vigente]',
+mDes:()=>`Contrate agora a internet Brisanet em ${PS.cidade}! ${lst(ofs())}.\nFale comigo, ${PS.nome}, e conheça as ofertas vigentes.\n💬 ${tel()}`};
+const FV={},FD={};
+const initials=()=>(PS.nome.trim()[0]||'?').toUpperCase();
+const inp=(k,l,t)=>`<label>${l}${t=='n'?'<span class="cn" id="cn_'+k+'"></span>':''}</label><input type="text" data-f="${k}">`;
+const ta=(k,l,c)=>`<label>${l}${c?'<span class="cn" id="cn_'+k+'"></span>':''}</label><textarea data-f="${k}"></textarea>`;
+const ED={
+1:`<h3 style="color:var(--bl)">1 • Monte a sua persona</h3><p style="color:var(--mu);font-size:14px;margin:0">Troque os dados e veja tudo se atualizar nas próximas etapas.</p>
+<label>Nome do vendedor</label><input type="text" data-p="nome"><div class="r2"><div><label>Cidade</label><input type="text" data-p="cidade"></div><div><label>UF</label><input type="text" data-p="uf" maxlength="2"></div></div>
+<div class="r2"><div><label>DDD</label><input type="text" data-p="ddd" maxlength="2"></div><div><label>WhatsApp</label><input type="text" data-p="fone"></div></div>
+<label>O que você oferece</label><label class="ck"><input type="checkbox" data-c="fibra"> Fibra</label><label class="ck"><input type="checkbox" data-c="g5"> 5G</label><label class="ck"><input type="checkbox" data-c="chip"> Chip</label>
+<label>Horário de atendimento</label><input type="text" data-p="hor">`,
+2:`<h3 style="color:var(--bl)">2 • Instagram</h3>${inp('iNome','Nome (pesquisável, até 64)','n')}${inp('iUser','@usuário')}${ta('iBio','Bio (até 150)',1)}${inp('iLink','Link do WhatsApp na bio')}<button class="cp" style="margin-top:12px" onclick="smRegen(['iNome','iUser','iBio','iLink'])">↺ Gerar de novo</button>`,
+3:`<h3 style="color:var(--bl)">3 • WhatsApp Business</h3>${inp('wNome','Nome da empresa')}${ta('wDesc','Descrição da empresa')}${ta('wRec','Recado')}${ta('wSau','Mensagem de saudação')}${ta('wQ1','Atalho /oferta')}${ta('wQ2','Atalho /documentos')}${ta('wQ3','Atalho /obrigado')}<button class="cp" style="margin-top:12px" onclick="smRegen(['wNome','wDesc','wRec','wSau','wQ1','wQ2','wQ3'])">↺ Gerar de novo</button>`,
+4:`<h3 style="color:var(--bl)">4 • Anúncio no Marketplace</h3>${inp('mTit','Título')}${inp('mPre','Preço')}${ta('mDes','Descrição')}<button class="cp" style="margin-top:12px" onclick="smRegen(['mTit','mPre','mDes'])">↺ Gerar de novo</button>`,
+5:`<h3>5</h3>`};
+let ss=1;
+function smShow(n){ss=n;$('#sim').dataset.s=n;[...$('#smNav').children].forEach((b,i)=>b.classList.toggle('on',i+1==n));
+if(n<5){$('#smEd').innerHTML=ED[n];smBind()}
+const vis={1:['0'],2:['1'],3:['2'],4:['3'],5:['1','2','3']}[n];document.querySelectorAll('.pv').forEach(e=>e.hidden=!vis.includes(e.dataset.pv));smRender()}
+function smBind(){const e=$('#smEd');
+e.querySelectorAll('[data-p]').forEach(i=>{i.value=PS[i.dataset.p];i.oninput=()=>{PS[i.dataset.p]=i.value;smAuto();smRender()}});
+e.querySelectorAll('[data-c]').forEach(i=>{i.checked=!!PS[i.dataset.c];i.onchange=()=>{PS[i.dataset.c]=i.checked?1:0;smAuto();smRender()}});
+e.querySelectorAll('[data-f]').forEach(i=>{i.value=FV[i.dataset.f];i.oninput=()=>{FV[i.dataset.f]=i.value;FD[i.dataset.f]=1;smRender()}})}
+function smAuto(){Object.keys(G).forEach(k=>{if(!FD[k])FV[k]=G[k]()})}
+function smRegen(ks){ks.forEach(k=>{FD[k]=0;FV[k]=G[k]()});smBind();smRender()}
+function cnt(k,max){const el=$('#cn_'+k);if(!el)return;const n=[...FV[k]].length;el.textContent=n+'/'+max;el.classList.toggle('w',n>max)}
+function smRender(){const v=FV;cnt('iNome',64);cnt('iBio',150);
+$('#pvP').innerHTML=`<h4>Sua persona</h4><div class="igp" style="text-align:center"><div class="avi" style="margin:0 auto 10px">${esc(initials())}</div><div style="font-size:22px;font-weight:800">${esc(PS.nome)}</div><div>Consultor Brisanet • ${esc(PS.cidade)}/${esc(PS.uf)}</div><div style="margin:8px 0">${lst(ofs()).replace(/^/,'📡 ')}</div><div>💬 ${esc(tel())}</div><div style="color:#666;font-size:13px;margin-top:6px">🕘 ${esc(PS.hor)}</div></div>`;
+$('#pvI').innerHTML=`<h4>Instagram</h4><div class="igp"><div class="tp"><div class="avi">${esc(initials())}</div><div><div class="un">${esc(v.iUser)}</div><div class="nm">${esc(v.iNome)}</div><div style="color:#666;font-size:13px">Consultor de telecomunicações</div></div></div><div class="bio">${esc(v.iBio)}</div><div class="lk">🔗 ${esc(v.iLink)}</div><div class="bt"><span>Seguir</span><span>Mensagem</span></div><div class="hl2"><div><i>📋</i>Planos</div><div><i>✍️</i>Contratar</div><div><i>🔧</i>Instalação</div><div><i>😀</i>Clientes</div></div></div>`;
+$('#pvW').innerHTML=`<h4>WhatsApp Business</h4><div class="ph2"><div class="scr" style="height:auto;max-height:560px"><div class="grp" style="margin-top:8px;padding:14px;text-align:center"><div class="avi" style="width:64px;height:64px;font-size:26px;margin:0 auto 8px;background:var(--or);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800">${esc(initials())}</div><b>${esc(v.wNome)}</b><div style="font-size:12px;color:#aaa;margin:6px 0">${esc(v.wDesc)}</div><div style="font-size:12px;color:#aaa">🕘 ${esc(PS.hor)}</div><div style="font-size:12px;margin-top:6px">ℹ️ ${esc(v.wRec)}</div><div style="font-size:12px;color:#25d366;margin-top:6px">${esc(tel())}</div></div>
+<h6>Mensagem de saudação</h6><div style="display:flex;flex-direction:column"><div class="bub" style="max-width:92%;align-self:flex-start;background:#202c33">${esc(v.wSau)}</div></div>
+<h6>Respostas rápidas</h6><div class="grp"><div class="row nc"><span><span class="tagq">oferta</span><br>${esc(v.wQ1)}</span></div><div class="row nc"><span><span class="tagq">documentos</span><br>${esc(v.wQ2)}</span></div><div class="row nc"><span><span class="tagq">obrigado</span><br>${esc(v.wQ3)}</span></div></div>
+<h6>Etiquetas</h6><div class="grp"><div class="row nc wt"><span>${dot('#FF7E05')} Novo</span></div><div class="row nc wt"><span>${dot('#4f7cff')} Em conversa</span></div><div class="row nc wt"><span>${dot('#f5c518')} Aguardando documento</span></div><div class="row nc wt"><span>${dot('#25d366')} Contratou</span></div><div class="row nc wt"><span>${dot('#b05cff')} Pós-venda</span></div></div></div></div>`;
+const tags=['internet','brisanet',slug(PS.cidade),...ofs().map(x=>x.toLowerCase())];
+$('#pvM').innerHTML=`<h4>Marketplace</h4><div class="mp"><div class="mpt">Prévia</div><div class="mpb" style="grid-template-columns:1fr"><div style="background:#f0f2f5;padding:12px"><div class="arw"><div class="art"><div class="logo"></div><p>A maior operadora 100% brasileira tem a melhor oferta para você.</p><div class="ar-m"><div class="ar-f">${esc(initials())}<small>Sua foto</small></div><div class="ar-p"><div>Oferta<br>vigente</div><div>Oferta<br>vigente</div></div></div><div><span class="pw">Entre em contato com</span><span class="nm">${esc(PS.nome)}</span><span class="ct">💬 ${esc(tel())}</span></div></div></div></div>
+<div style="padding:16px;font-size:14px;border-top:1px solid #dadde1"><h4 style="font-size:20px;margin:0;color:#050505">${esc(v.mTit)}</h4><div style="font-size:17px;font-weight:600">${esc(v.mPre)}</div><small style="color:#65676b;display:block;margin:2px 0 10px">Anunciado há alguns segundos em <b>${esc(PS.cidade)}</b></small><b>Detalhes</b><div style="white-space:pre-wrap;margin:6px 0">${esc(v.mDes)}</div>${tags.map(t=>`<span class="ch" style="display:inline-block;background:#e4e6eb;border-radius:99px;padding:4px 11px;margin:0 6px 6px 0;font-size:13px">${esc(t)}</span>`).join('')}<div class="sel" style="margin-top:8px"><i>${esc(initials())}</i>${esc(PS.nome)}</div></div></div></div>`;
+if(ss==5)$('#pvP').hidden=true}
+function smBoot(){window.smInit=1;smAuto();
+['1 • Persona','2 • Instagram','3 • WhatsApp','4 • Marketplace','5 • Apresentar'].forEach((t,i)=>{const b=document.createElement('button');b.textContent=t;b.onclick=()=>smShow(i+1);$('#smNav').append(b)});smShow(1)}
+let tmS=900,tmI=null;
+const tmP=()=>{$('#tm').textContent=String(Math.floor(tmS/60)).padStart(2,'0')+':'+String(tmS%60).padStart(2,'0');$('#tm').style.color=tmS==0?'#d93a3a':'var(--or)'};
+function tmGo(){if(tmI){clearInterval(tmI);tmI=null;return}tmI=setInterval(()=>{if(tmS>0){tmS--;tmP()}else{clearInterval(tmI);tmI=null}},1000)}
+function tmReset(){clearInterval(tmI);tmI=null;tmS=900;tmP()}
+</script>
+</body>
+</html>
